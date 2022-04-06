@@ -1,1 +1,216 @@
-{"trial_id": "09", "hyperparameters": {"space": [{"class_name": "Int", "config": {"name": "conv1.1_filters", "default": null, "conditions": [], "min_value": 32, "max_value": 96, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv1.2_filters", "default": null, "conditions": [], "min_value": 32, "max_value": 96, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout1", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv2.1_filters", "default": null, "conditions": [], "min_value": 64, "max_value": 128, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv2.2_filters", "default": null, "conditions": [], "min_value": 64, "max_value": 128, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout2", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv3.1_filters", "default": null, "conditions": [], "min_value": 128, "max_value": 196, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv3.2_filters", "default": null, "conditions": [], "min_value": 128, "max_value": 196, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout3", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "dense_units", "default": null, "conditions": [], "min_value": 64, "max_value": 512, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout4", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Float", "config": {"name": "learning_rate", "default": 0.001, "conditions": [], "min_value": 0.0001, "max_value": 0.01, "step": 0.0001, "sampling": null}}], "values": {"conv1.1_filters": 96, "conv1.2_filters": 96, "dropout1": 0.1, "conv2.1_filters": 128, "conv2.2_filters": 64, "dropout2": 0.5, "conv3.1_filters": 192, "conv3.2_filters": 192, "dropout3": 0.1, "dense_units": 288, "dropout4": 0.1, "learning_rate": 0.0001}}, "metrics": {"metrics": {"loss": {"direction": "min", "observations": [{"value": [0.5536297559738159], "step": 0}]}, "accuracy": {"direction": "max", "observations": [{"value": [0.8033999800682068], "step": 0}]}, "val_loss": {"direction": "min", "observations": [{"value": [0.5816691517829895], "step": 0}]}, "val_accuracy": {"direction": "max", "observations": [{"value": [0.7982000112533569], "step": 0}]}}}, "score": 0.7982000112533569, "best_step": 0, "status": "COMPLETED"}
+{
+    "trial_id": "09",
+    "hyperparameters": {
+        "space": [
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv1.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 32,
+                    "max_value": 96,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv1.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 32,
+                    "max_value": 96,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout1",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv2.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 128,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv2.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 128,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout2",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv3.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 128,
+                    "max_value": 196,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv3.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 128,
+                    "max_value": 196,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout3",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "dense_units",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 512,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout4",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "learning_rate",
+                    "default": 0.001,
+                    "conditions": [],
+                    "min_value": 0.0001,
+                    "max_value": 0.01,
+                    "step": 0.0001,
+                    "sampling": null
+                }
+            }
+        ],
+        "values": {
+            "conv1.1_filters": 96,
+            "conv1.2_filters": 96,
+            "dropout1": 0.1,
+            "conv2.1_filters": 128,
+            "conv2.2_filters": 64,
+            "dropout2": 0.5,
+            "conv3.1_filters": 192,
+            "conv3.2_filters": 192,
+            "dropout3": 0.1,
+            "dense_units": 288,
+            "dropout4": 0.1,
+            "learning_rate": 0.0001
+        }
+    },
+    "metrics": {
+        "metrics": {
+            "loss": {
+                "direction": "min",
+                "observations": [
+                    {
+                        "value": [
+                            0.5536297559738159
+                        ],
+                        "step": 0
+                    }
+                ]
+            },
+            "accuracy": {
+                "direction": "max",
+                "observations": [
+                    {
+                        "value": [
+                            0.8033999800682068
+                        ],
+                        "step": 0
+                    }
+                ]
+            },
+            "val_loss": {
+                "direction": "min",
+                "observations": [
+                    {
+                        "value": [
+                            0.5816691517829895
+                        ],
+                        "step": 0
+                    }
+                ]
+            },
+            "val_accuracy": {
+                "direction": "max",
+                "observations": [
+                    {
+                        "value": [
+                            0.7982000112533569
+                        ],
+                        "step": 0
+                    }
+                ]
+            }
+        }
+    },
+    "score": 0.7982000112533569,
+    "best_step": 0,
+    "status": "COMPLETED"
+}

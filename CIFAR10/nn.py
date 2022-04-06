@@ -10,6 +10,7 @@ from keras.layers import MaxPooling2D
 from keras.layers import Dense
 from keras.layers import Flatten
 from keras.layers import Dropout
+from tensorflow.keras.optimizers import Adam
 #import to_categorical
 from tensorflow.keras.utils import to_categorical
 
@@ -19,6 +20,8 @@ import cv2
 
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
+
+print(tf.config.list_physical_devices('GPU'))
 
 # load training and test data
 (x_train, y_train), (x_test, y_test) = keras.datasets.cifar10.load_data()
@@ -34,25 +37,25 @@ x_test /= 255
 
 def get_new_model():
     model = keras.Sequential([
-        keras.layers.Conv2D(filters=32, kernel_size=(3, 3), activation='relu', input_shape=(32, 32, 3)),
-        keras.layers.Conv2D(filters=32, kernel_size=(3, 3), activation='relu'),
+        keras.layers.Conv2D(filters=96, kernel_size=(3, 3), activation='relu', input_shape=(32, 32, 3)),
+        keras.layers.Conv2D(filters=96, kernel_size=(3, 3), activation='relu'),
+        keras.layers.MaxPooling2D(2, 2),
+        keras.layers.Dropout(0.1),
+        keras.layers.Conv2D(filters=128, kernel_size=(3, 3), activation='relu'),
+        keras.layers.Conv2D(filters=64, kernel_size=(3, 3), activation='relu'),
         keras.layers.MaxPooling2D(2, 2),
         keras.layers.Dropout(0.5),
-        keras.layers.Conv2D(filters=64, kernel_size=(3, 3), activation='relu'),
-        keras.layers.Conv2D(filters=64, kernel_size=(3, 3), activation='relu'),
-        keras.layers.MaxPooling2D(2, 2),
-        keras.layers.Dropout(0.5),
-        keras.layers.Conv2D(filters=128, kernel_size=(3, 3), activation='relu'),
-        keras.layers.Conv2D(filters=128, kernel_size=(3, 3), activation='relu'),
+        keras.layers.Conv2D(filters=192, kernel_size=(3, 3), activation='relu'),
+        keras.layers.Conv2D(filters=192, kernel_size=(3, 3), activation='relu'),
         keras.layers.MaxPooling2D(2, 2, padding='same'),
-        keras.layers.Dropout(0.5),
+        keras.layers.Dropout(0.1),
         keras.layers.Flatten(),
-        keras.layers.Dense(units=128, activation='relu'),
-        keras.layers.Dropout(0.5),
+        keras.layers.Dense(units=288, activation='relu'),
+        keras.layers.Dropout(0.1),
         keras.layers.Dense(units=10, activation='softmax')
     ])
-    #opt = keras.optimizers.SGD(learning_rate=0.001, momentum=0.9)
-    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+    opt = Adam(learning_rate=0.0001)
+    model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
 def import_model():
@@ -72,7 +75,7 @@ def print_data(x_train):
 model = get_new_model()
 
 
-history = model.fit(x_train, y_train, epochs=100, validation_data=(x_test, y_test), batch_size=64)
+history = model.fit(x_train, y_train, epochs=30, validation_data=(x_test, y_test), batch_size=16)
 
 model.save('cifar10_model.h5')
 

@@ -1,1 +1,176 @@
-{"ongoing_trials": {}, "hyperparameters": {"space": [{"class_name": "Int", "config": {"name": "conv1.1_filters", "default": null, "conditions": [], "min_value": 32, "max_value": 96, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv1.2_filters", "default": null, "conditions": [], "min_value": 32, "max_value": 96, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout1", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv2.1_filters", "default": null, "conditions": [], "min_value": 64, "max_value": 128, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv2.2_filters", "default": null, "conditions": [], "min_value": 64, "max_value": 128, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout2", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv3.1_filters", "default": null, "conditions": [], "min_value": 128, "max_value": 196, "step": 32, "sampling": null}}, {"class_name": "Int", "config": {"name": "conv3.2_filters", "default": null, "conditions": [], "min_value": 128, "max_value": 196, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout3", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Int", "config": {"name": "dense_units", "default": null, "conditions": [], "min_value": 64, "max_value": 512, "step": 32, "sampling": null}}, {"class_name": "Float", "config": {"name": "dropout4", "default": 0.2, "conditions": [], "min_value": 0.1, "max_value": 0.7, "step": 0.1, "sampling": null}}, {"class_name": "Float", "config": {"name": "learning_rate", "default": 0.001, "conditions": [], "min_value": 0.0001, "max_value": 0.01, "step": 0.0001, "sampling": null}}], "values": {"conv1.1_filters": 32, "conv1.2_filters": 32, "dropout1": 0.2, "conv2.1_filters": 64, "conv2.2_filters": 64, "dropout2": 0.2, "conv3.1_filters": 128, "conv3.2_filters": 128, "dropout3": 0.2, "dense_units": 64, "dropout4": 0.2, "learning_rate": 0.001}}, "seed": 42, "seed_state": 90, "tried_so_far": ["470f832754ea5052d6d91be2f3af68a0", "1d49271f586f0e0c93bccb136d73b5c6", "fc20f9576d7d9fea9888731d1c5755e4", "dd1be12478c9180e472724edcc46c359"], "num_initial_points": 2, "alpha": 0.0001, "beta": 2.6}
+{
+    "ongoing_trials": {},
+    "hyperparameters": {
+        "space": [
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv1.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 32,
+                    "max_value": 96,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv1.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 32,
+                    "max_value": 96,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout1",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv2.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 128,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv2.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 128,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout2",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv3.1_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 128,
+                    "max_value": 196,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "conv3.2_filters",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 128,
+                    "max_value": 196,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout3",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Int",
+                "config": {
+                    "name": "dense_units",
+                    "default": null,
+                    "conditions": [],
+                    "min_value": 64,
+                    "max_value": 512,
+                    "step": 32,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "dropout4",
+                    "default": 0.2,
+                    "conditions": [],
+                    "min_value": 0.1,
+                    "max_value": 0.7,
+                    "step": 0.1,
+                    "sampling": null
+                }
+            },
+            {
+                "class_name": "Float",
+                "config": {
+                    "name": "learning_rate",
+                    "default": 0.001,
+                    "conditions": [],
+                    "min_value": 0.0001,
+                    "max_value": 0.01,
+                    "step": 0.0001,
+                    "sampling": null
+                }
+            }
+        ],
+        "values": {
+            "conv1.1_filters": 32,
+            "conv1.2_filters": 32,
+            "dropout1": 0.2,
+            "conv2.1_filters": 64,
+            "conv2.2_filters": 64,
+            "dropout2": 0.2,
+            "conv3.1_filters": 128,
+            "conv3.2_filters": 128,
+            "dropout3": 0.2,
+            "dense_units": 64,
+            "dropout4": 0.2,
+            "learning_rate": 0.001
+        }
+    },
+    "seed": 42,
+    "seed_state": 90,
+    "tried_so_far": [
+        "470f832754ea5052d6d91be2f3af68a0",
+        "1d49271f586f0e0c93bccb136d73b5c6",
+        "fc20f9576d7d9fea9888731d1c5755e4",
+        "dd1be12478c9180e472724edcc46c359"
+    ],
+    "num_initial_points": 2,
+    "alpha": 0.0001,
+    "beta": 2.6
+}
